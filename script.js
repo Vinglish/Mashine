@@ -20,6 +20,8 @@ function Cars(mark, type, model, speed, weight, color, places, amount, fuel, con
         document.write('Обьем: ' + this.amount + '<br>');
         document.write('Горючее: ' + this.fuel + '<br>');
         document.write('Расход: ' + this.cons + '<br>');
+        }
+    this.maxLong = function() {
         document.write('Максимальное расстояние на полном баке: ' + Math.round(parseFloat(amount) / parseFloat(cons) * 100) + ' км');
     }
 }
@@ -41,18 +43,23 @@ function allInfo() {
     switch (car) {
         case 'Lada':
             Lada.getInfo();
+            Lada.maxLong();
             break;
         case 'Opel':
             Opel.getInfo();
+            Opel.maxLong();
             break;
         case 'Renault':
             Renault.getInfo();
+            Renault.maxLong();
             break;
         case 'Subaru':
             Subaru.getInfo();
+            Subaru.maxLong();
             break;
         case 'Toyota':
             Toyota.getinfo();
+            Toyota.maxLong();
             break;
         default:
             alert('такой марки не существует');
